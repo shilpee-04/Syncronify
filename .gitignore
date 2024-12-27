@@ -1,0 +1,14 @@
+/node_modules
+/.env
+/error.log
+/server/node_modules
+/server/dist
+/server/.env
+/server/error.log
+/client/node_modules
+/client/dist
+/client/.env
+/client/.next
+.next/
+/client/.next/
+

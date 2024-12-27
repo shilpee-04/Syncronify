@@ -1,0 +1,15 @@
+FROM node:16.15.0 as build
+
+ARG BUILD_ENV = prod
+
+WORKDIR /app-client    
+
+COPY ./next-client/package.json /app-client/package.json
+COPY ./next-client/package-lock.json /app-client/package-lock.json
+
+RUN npm cache clean --force
+RUN npm install
+
+COPY ./next-client .
+
+CMD npm run dev
